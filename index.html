@@ -1,0 +1,1436 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Usługi Koparką Wywrotką – Iława i okolice</title>
+    <meta name="description" content="Profesjonalne usługi koparko-ładowarką, koparką kołową i wywrotką. Iława i okolice. Wykopy, niwelacja, transport. Tel: 606 852 160" />
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="https://i.ibb.co/pvXXV73W/689495698-122096086329318216-1728774743153418889-n.jpg" />
+    
+    <!-- Google Fonts: Barlow (wght 300, 400, 500, 600, 700, 800) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,700&display=swap" rel="stylesheet" />
+    
+    <!-- Font Awesome 6 (Facebook social integration) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+      :root {
+        --dark: #141412;        /* Near-black warm heavy machinery black */
+        --steel: #2C2C2A;       /* Dark steel surface */
+        --mid: #5A5A55;         /* Secondary text, muted elements */
+        --light: #D8D8D4;       /* Borders and rules on light background */
+        --rule: rgba(255, 255, 255, 0.07); /* Borders and rules on dark background */
+        --page: #EFEFEC;        /* Cool concrete gray-white background */
+        --warm-white: #F8F8F5;  /* Surface / Light section background */
+        --accent: #D4820A;      /* Construction amber / excavator yellow */
+        --text: #1A1A18;        /* Main dark text */
+        --muted: #8A8A85;       /* Muted tertiary gray */
+      }
+
+      /* Base resets */
+      *, *::before, *::after {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        border-radius: 0 !important; /* Strictly hard machinery edges */
+      }
+
+      html {
+        scroll-behavior: smooth;
+        background-color: var(--page);
+        color: var(--text);
+        font-family: 'Barlow', sans-serif;
+      }
+
+      body {
+        min-height: 100vh;
+        overflow-x: hidden;
+      }
+
+      /* Layout structures */
+      .section-container {
+        width: 100%;
+        max-width: 1160px;
+        margin: 0 auto;
+        padding: 0 40px;
+      }
+
+      section:not(.hero-section) {
+        padding: 104px 0;
+      }
+
+      /* Navigation Sticky */
+      .nav-sticky {
+        position: sticky;
+        top: 0;
+        background-color: var(--dark);
+        border-bottom: 1px solid var(--rule);
+        z-index: 1000;
+        padding: 16px 40px;
+      }
+
+      .nav-inner {
+        max-width: 1160px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .nav-brand {
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+      }
+
+      .nav-logo-text {
+        font-family: 'Barlow', sans-serif;
+        font-weight: 800;
+        font-size: 1rem;
+        letter-spacing: 0.05em;
+        color: var(--warm-white);
+        text-transform: uppercase;
+      }
+
+      .nav-logo-text span {
+        font-weight: 400;
+        color: var(--muted);
+      }
+
+      .nav-sublabel {
+        font-family: 'Barlow', sans-serif;
+        font-weight: 300;
+        font-size: 0.72rem;
+        letter-spacing: 0.15em;
+        color: var(--mid);
+        text-transform: uppercase;
+      }
+
+      /* Desktop Nav Menu */
+      .desktop-menu {
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
+
+      .desktop-menu a {
+        font-family: 'Barlow', sans-serif;
+        font-weight: 500;
+        font-size: 0.875rem;
+        color: var(--muted);
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        transition: color 0.25s ease;
+      }
+
+      .desktop-menu a:hover {
+        color: var(--warm-white);
+      }
+
+      .desktop-menu .dot {
+        font-family: 'Barlow', sans-serif;
+        color: var(--mid);
+        font-size: 0.875rem;
+        user-select: none;
+      }
+
+      /* Sticky Nav Contact Numbers */
+      .nav-contact-block {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 2px;
+      }
+
+      .nav-phone {
+        font-family: 'Barlow', sans-serif;
+        font-weight: 600;
+        font-size: 0.85rem;
+        color: var(--accent);
+        text-decoration: none;
+        letter-spacing: 0.02em;
+        transition: color 0.2s ease;
+      }
+
+      .nav-phone:hover {
+        color: var(--warm-white);
+      }
+
+      /* Mobile Hamburger Menu button */
+      .hamburger-btn {
+        display: none;
+        background: none;
+        border: none;
+        cursor: pointer;
+        padding: 8px;
+        z-index: 1200;
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      .hamburger-btn span {
+        display: block;
+        width: 24px;
+        height: 2px;
+        background-color: var(--warm-white);
+        transition: transform 0.3s ease, opacity 0.3s ease;
+      }
+
+      /* Hamburger menu active state animations */
+      .hamburger-btn.active .line-1 {
+        transform: translateY(8px) rotate(45deg);
+      }
+
+      .hamburger-btn.active .line-2 {
+        opacity: 0;
+      }
+
+      .hamburger-btn.active .line-3 {
+        transform: translateY(-8px) rotate(-45deg);
+      }
+
+      /* Mobile overlay view */
+      .mobile-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: var(--dark);
+        z-index: 1100;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 40px;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+      }
+
+      .mobile-overlay.active {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .mobile-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 28px;
+        margin-bottom: 48px;
+      }
+
+      .mobile-link {
+        font-family: 'Barlow', sans-serif;
+        font-weight: 700;
+        font-size: 1.8rem;
+        color: var(--muted);
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        transition: color 0.2s ease;
+      }
+
+      .mobile-link:hover {
+        color: var(--warm-white);
+      }
+
+      .mobile-phones {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+        border-top: 1px solid var(--rule);
+        padding-top: 24px;
+        width: 100%;
+        max-width: 260px;
+      }
+
+      .mobile-phone-link {
+        font-family: 'Barlow', sans-serif;
+        font-weight: 700;
+        font-size: 1.4rem;
+        color: var(--accent);
+        text-decoration: none;
+        transition: color 0.2s ease;
+      }
+
+      .mobile-phone-link:hover {
+        color: var(--warm-white);
+      }
+
+      /* HERO SECTION */
+      .hero-section {
+        position: relative;
+        height: 100vh;
+        min-height: 600px;
+        background-image: linear-gradient(to bottom, rgba(20,20,18,0.55) 0%, rgba(20,20,18,0.80) 70%, rgba(20,20,18,0.95) 100%), url('https://i.ibb.co/1YjXdkrV/695856445-122096089485318216-2287039888826616945-n.jpg');
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        align-items: flex-end;
+        padding: 0 max(40px, 6vw) max(64px, 9vh);
+      }
+
+      .hero-banner-vertical {
+        position: absolute;
+        top: 104px;
+        right: max(40px, 6vw);
+        writing-mode: vertical-rl;
+        transform: rotate(180deg);
+        font-family: 'Barlow', sans-serif;
+        font-weight: 400;
+        font-size: 0.7rem;
+        letter-spacing: 0.25em;
+        color: rgba(255, 255, 255, 0.12);
+        text-transform: uppercase;
+        pointer-events: none;
+      }
+
+      .hero-content {
+        max-width: 1160px;
+        width: 100%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .hero-location-label {
+        font-family: 'Barlow', sans-serif;
+        font-weight: 600;
+        font-size: 0.7rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--accent);
+      }
+
+      .hero-rule {
+        width: 56px;
+        height: 2px;
+        background-color: var(--accent);
+        margin: 18px 0;
+        border: none;
+      }
+
+      .hero-heading {
+        display: flex;
+        flex-direction: column;
+        line-height: 0.92;
+        margin-bottom: 24px;
+      }
+
+      .hero-heading-line {
+        font-family: 'Barlow', sans-serif;
+        font-weight: 800;
+        font-size: clamp(3.8rem, 9vw, 8.5rem);
+        color: var(--warm-white);
+        letter-spacing: -0.03em;
+        text-transform: uppercase;
+      }
+
+      .hero-heading-stamp {
+        font-weight: 300;
+        color: var(--muted);
+        font-size: clamp(2rem, 5vw, 4.5rem);
+      }
+
+      .hero-caption {
+        font-family: 'Barlow', sans-serif;
+        font-weight: 300;
+        font-size: 1.05rem;
+        line-height: 1.72;
+        color: rgba(255, 255, 255, 0.55);
+        max-width: 420px;
+        margin-bottom: 36px;
+      }
+
+      .hero-links {
+        display: flex;
+        gap: 32px;
+        align-items: center;
+        flex-wrap: wrap;
+      }
+
+      .hero-link-primary {
+        font-family: 'Barlow', sans-serif;
+        font-weight: 600;
+        font-size: 1rem;
+        color: var(--accent);
+        text-decoration: none;
+        transition: color 0.2s ease;
+      }
+
+      .hero-link-primary:hover {
+        color: var(--warm-white);
+      }
+
+      .hero-link-secondary {
+        font-family: 'Barlow', sans-serif;
+        font-weight: 400;
+        font-size: 1rem;
+        color: rgba(255, 255, 255, 0.35);
+        text-decoration: none;
+        transition: color 0.2s ease;
+      }
+
+      .hero-link-secondary:hover {
+        color: rgba(255, 255, 255, 0.7);
+      }
+
+      /* SECTION LABELS & HEADINGS */
+      .section-label {
+        font-family: 'Barlow', sans-serif;
+        font-weight: 600;
+        font-size: 0.7rem;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: var(--accent);
+        margin-bottom: 16px;
+        display: block;
+      }
+
+      h2 {
+        font-family: 'Barlow', sans-serif;
+        font-weight: 700;
+        font-size: clamp(2rem, 4.5vw, 3.8rem);
+        letter-spacing: -0.02em;
+        line-height: 1;
+        margin-bottom: 48px;
+        text-transform: uppercase;
+      }
+
+      .light-bg h2 {
+        color: var(--dark);
+      }
+
+      .dark-bg h2 {
+        color: var(--warm-white);
+      }
+
+      /* ABOUT SECTION (01) */
+      .about-section {
+        background-color: var(--warm-white);
+        border-bottom: 1px solid var(--light);
+      }
+
+      .about-columns {
+        display: grid;
+        grid-template-columns: 1.4fr 1fr;
+        gap: 80px;
+        align-items: start;
+      }
+
+      .about-body p {
+        font-family: 'Barlow', sans-serif;
+        font-weight: 400;
+        font-size: 1.05rem;
+        line-height: 1.72;
+        color: var(--mid);
+        margin-bottom: 24px;
+      }
+
+      .about-features {
+        display: flex;
+        flex-direction: column;
+        margin-top: 40px;
+      }
+
+      .about-feature-item {
+        border-top: 1px solid var(--light);
+        padding: 18px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .about-feature-item:last-child {
+        border-bottom: 1px solid var(--light);
+      }
+
+      .about-feature-name {
+        font-family: 'Barlow', sans-serif;
+        font-weight: 600;
+        color: var(--dark);
+        font-size: 1.05rem;
+      }
+
+      .about-feature-value {
+        font-family: 'Barlow', sans-serif;
+        font-weight: 400;
+        color: var(--muted);
+        font-size: 1.05rem;
+        text-align: right;
+      }
+
+      /* Contact card in about */
+      .about-contact-card {
+        background-color: var(--dark);
+        padding: 36px;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .about-card-label {
+        font-family: 'Barlow', sans-serif;
+        font-weight: 600;
+        font-size: 0.7rem;
+        letter-spacing: 0.25em;
+        color: var(--accent);
+        text-transform: uppercase;
+        margin-bottom: 16px;
+      }
+
+      .about-card-row {
+        border-bottom: 1px solid var(--rule);
+        padding: 16px 0;
+      }
+
+      .about-card-row:first-of-type {
+        padding-top: 0;
+      }
+
+      .about-card-phone {
+        font-family: 'Barlow', sans-serif;
+        font-weight: 700;
+        font-size: 1.8rem;
+        color: var(--warm-white);
+        text-decoration: none;
+        display: block;
+        transition: color 0.2s ease;
+      }
+
+      .about-card-phone:hover {
+        color: var(--accent);
+      }
+
+      .about-card-mail-wrap {
+        margin-top: 20px;
+        margin-bottom: 16px;
+      }
+
+      .about-card-mail {
+        font-family: 'Barlow', sans-serif;
+        font-weight: 400;
+        color: var(--mid);
+        font-size: 0.85rem;
+        text-decoration: none;
+        transition: color 0.2s ease;
+      }
+
+      .about-card-mail:hover {
+        color: var(--accent);
+      }
+
+      .about-card-note {
+        font-family: 'Barlow', sans-serif;
+        font-weight: 300;
+        color: var(--mid);
+        font-size: 0.8rem;
+      }
+
+      /* SERVICES SECTION (02) */
+      .services-section {
+        background-color: var(--page);
+      }
+
+      .services-list {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 56px;
+      }
+
+      .service-row {
+        border-bottom: 1px solid var(--light);
+        padding: 28px 0;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        color: inherit;
+        background-color: transparent;
+        transition: background-color 0.25s ease;
+        cursor: default;
+      }
+
+      .service-row:first-child {
+        border-top: 1px solid var(--light);
+      }
+
+      .service-row:hover {
+        background-color: #E8E8E4;
+      }
+
+      .service-number {
+        font-family: 'Barlow', sans-serif;
+        font-size: 3rem;
+        font-weight: 800;
+        line-height: 1;
+        color: var(--light);
+        min-width: 80px;
+        transition: color 0.25s ease;
+      }
+
+      .service-row:hover .service-number {
+        color: var(--accent);
+      }
+
+      .service-title {
+        font-family: 'Barlow', sans-serif;
+        font-weight: 600;
+        color: var(--dark);
+        font-size: 1.05rem;
+        flex: 1;
+        padding: 0 40px;
+      }
+
+      .service-desc {
+        font-family: 'Barlow', sans-serif;
+        font-weight: 400;
+        color: var(--muted);
+        font-size: 0.9rem;
+        text-align: right;
+        max-width: 300px;
+      }
+
+      /* Services bottom black strip */
+      .services-cta-banner {
+        background-color: var(--dark);
+        padding: 28px 48px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-left: 4px solid var(--accent); /* Only amber border in services */
+      }
+
+      .services-cta-left {
+        font-family: 'Barlow', sans-serif;
+        font-weight: 700;
+        font-style: italic;
+        font-size: 1.1rem;
+        color: var(--warm-white);
+      }
+
+      .services-cta-phone {
+        font-family: 'Barlow', sans-serif;
+        font-weight: 600;
+        font-size: 1rem;
+        color: var(--accent);
+        text-decoration: none;
+        transition: color 0.2s ease;
+      }
+
+      .services-cta-phone:hover {
+        color: var(--warm-white);
+      }
+
+      /* PHOTOS SECTION (03) */
+      .photos-section {
+        background-color: var(--dark);
+        padding-bottom: 104px;
+      }
+
+      .machinery-img-box {
+        width: 100%;
+        overflow: hidden;
+        margin-bottom: 24px;
+        position: relative;
+        cursor: pointer;
+      }
+
+      .machinery-img {
+        width: 100%;
+        height: auto;
+        display: block;
+        transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .machinery-img-box:hover .machinery-img {
+        transform: scale(1.015);
+      }
+
+      .photo-bottom-strip {
+        background-color: #1E1E1C;
+        padding: 20px 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .photo-strip-spec {
+        font-family: 'Barlow', sans-serif;
+        font-weight: 400;
+        color: var(--mid);
+        font-size: 0.875rem;
+      }
+
+      .photo-strip-fb {
+        font-family: 'Barlow', sans-serif;
+        font-weight: 500;
+        color: var(--accent);
+        text-decoration: none;
+        font-size: 0.875rem;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        transition: color 0.2s ease;
+      }
+
+      .photo-strip-fb:hover {
+        color: var(--warm-white);
+        text-decoration: underline;
+      }
+
+      /* CONTACT SECTION (04) */
+      .contact-section {
+        background-color: var(--warm-white);
+        border-top: 1px solid var(--light);
+      }
+
+      .contact-columns {
+        display: grid;
+        grid-template-columns: 1.2fr 1fr;
+        gap: 80px;
+        align-items: start;
+      }
+
+      .contact-intro-p {
+        font-family: 'Barlow', sans-serif;
+        font-weight: 400;
+        font-size: 1.05rem;
+        line-height: 1.72;
+        color: var(--mid);
+        margin-bottom: 36px;
+        max-width: 480px;
+      }
+
+      .contact-list-items {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .contact-detail-row {
+        border-bottom: 1px solid var(--light);
+        padding: 20px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+      }
+
+      .contact-detail-row:first-child {
+        border-top: 1px solid var(--light);
+      }
+
+      .contact-row-label {
+        font-family: 'Barlow', sans-serif;
+        font-weight: 500;
+        font-size: 0.7srem; /* small letter spaced label */
+        font-size: 0.72rem;
+        letter-spacing: 0.15em;
+        color: var(--muted);
+      }
+
+      .contact-phone-active {
+        font-family: 'Barlow', sans-serif;
+        font-weight: 700;
+        font-size: 1.2rem;
+        color: var(--dark);
+        text-decoration: none;
+        transition: color 0.2s ease;
+        display: inline-block;
+      }
+
+      .contact-phone-active:hover {
+        color: var(--accent);
+      }
+
+      .contact-mail-active {
+        font-family: 'Barlow', sans-serif;
+        font-weight: 400;
+        font-size: 1.05rem;
+        color: var(--mid);
+        text-decoration: none;
+        transition: color 0.2s ease;
+        display: inline-block;
+      }
+
+      .contact-mail-active:hover {
+        color: var(--accent);
+      }
+
+      .contact-text-static {
+        font-family: 'Barlow', sans-serif;
+        font-weight: 400;
+        font-size: 1.05rem;
+        color: var(--mid);
+      }
+
+      .contact-fb-active {
+        font-family: 'Barlow', sans-serif;
+        font-weight: 500;
+        font-size: 1.05rem;
+        color: var(--accent);
+        text-decoration: none;
+        transition: color 0.2s ease;
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .contact-fb-active:hover {
+        text-decoration: underline;
+        color: var(--dark);
+      }
+
+      /* Right decorative giant phone columns */
+      .contact-decorative-block {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .massive-phone-link {
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+        color: var(--page); /* Light concrete color initially */
+        transition: color 0.32s cubic-bezier(0.16, 1, 0.3, 1);
+        width: 100%;
+        margin-bottom: 4px;
+      }
+
+      .massive-phone-link:hover {
+        color: var(--dark); /* Dramatic color shift to dark */
+      }
+
+      .massive-phone-block-1 {
+        font-family: 'Barlow', sans-serif;
+        font-weight: 800;
+        font-size: clamp(3rem, 6vw, 5.5rem);
+        line-height: 0.95;
+        letter-spacing: -0.03em;
+        text-transform: uppercase;
+      }
+
+      .massive-phone-block-2 {
+        font-family: 'Barlow', sans-serif;
+        font-weight: 800;
+        font-size: clamp(3rem, 6vw, 5.5rem);
+        line-height: 0.95;
+        letter-spacing: -0.03em;
+        text-transform: uppercase;
+      }
+
+      .contact-decorative-divider {
+        width: 100%;
+        border: none;
+        border-top: 1px solid var(--light);
+        margin: 24px 0;
+      }
+
+      .decorative-note {
+        font-family: 'Barlow', sans-serif;
+        font-weight: 400;
+        font-size: 0.85rem;
+        color: var(--muted);
+        margin-top: 16px;
+      }
+
+      /* FOOTER */
+      .site-footer {
+        background-color: #0E0E0C;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        padding: 28px 0;
+      }
+
+      .footer-inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .footer-brand-title {
+        font-family: 'Barlow', sans-serif;
+        font-weight: 600;
+        color: var(--accent);
+        font-size: 0.85rem;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+      }
+
+      .footer-location-stamp {
+        font-family: 'Barlow', sans-serif;
+        font-weight: 300;
+        color: rgba(255, 255, 255, 0.2);
+        font-size: 0.8rem;
+      }
+
+      .footer-copyright {
+        font-family: 'Barlow', sans-serif;
+        font-weight: 300;
+        color: rgba(255, 255, 255, 0.15);
+        font-size: 0.8rem;
+      }
+
+      /* LIGHTBOX MODAL */
+      .lightbox-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0, 0.96);
+        backdrop-filter: blur(8px);
+        z-index: 2000;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.35s ease, visibility 0.35s ease;
+      }
+
+      .lightbox-overlay.active {
+        opacity: 1;
+        visibility: visible;
+      }
+
+      .lightbox-wrapper {
+        position: relative;
+        max-width: 94vw;
+        max-height: 94vh;
+      }
+
+      .lightbox-image {
+        max-width: 94vw;
+        max-height: 94vh;
+        object-fit: contain;
+        display: block;
+      }
+
+      .lightbox-close-btn {
+        position: absolute;
+        top: -40px;
+        right: 0;
+        background: none;
+        border: none;
+        color: var(--warm-white);
+        font-family: 'Barlow', sans-serif;
+        font-weight: 500;
+        font-size: 0.875rem;
+        letter-spacing: 0.1em;
+        cursor: pointer;
+        padding: 4px 8px;
+        transition: color 0.2s ease;
+      }
+
+      .lightbox-close-btn:hover {
+        color: var(--accent);
+      }
+
+      /* INTERSECTION OBSERVER SCROLL REVEAL STYLE */
+      .reveal {
+        opacity: 0;
+        transform: translateY(15px);
+        transition: opacity 0.4s ease, transform 0.4s ease;
+      }
+
+      .reveal.reveal-active {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* RESPONSIVE SCALES */
+      @media (max-width: 990px) {
+        .about-columns {
+          grid-template-columns: 1fr;
+          gap: 56px;
+        }
+
+        .contact-columns {
+          grid-template-columns: 1fr;
+          gap: 56px;
+        }
+      }
+
+      @media (max-width: 900px) {
+        .desktop-menu {
+          display: none;
+        }
+
+        .nav-contact-block {
+          display: none;
+        }
+
+        .hamburger-btn {
+          display: flex;
+        }
+      }
+
+      @media (max-width: 768px) {
+        section:not(.hero-section) {
+          padding: 64px 0;
+        }
+
+        .section-container {
+          padding: 0 24px;
+        }
+
+        .nav-sticky {
+          padding: 16px 24px;
+        }
+
+        /* Hero */
+        .hero-banner-vertical {
+          display: none;
+        }
+
+        .hero-section {
+          padding: 0 24px max(40px, 6vh);
+        }
+
+        /* Services rows on mobile */
+        .service-row {
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 20px 0;
+        }
+
+        .service-number {
+          min-width: auto;
+          margin-bottom: 8px;
+        }
+
+        .service-title {
+          padding: 0;
+          margin-bottom: 6px;
+          width: 100%;
+        }
+
+        .service-desc {
+          text-align: left;
+          max-width: 100%;
+        }
+
+        /* Services strip on mobile */
+        .services-cta-banner {
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 24px;
+          gap: 16px;
+        }
+
+        /* Photo strip below photo */
+        .photo-bottom-strip {
+          flex-direction: column;
+          align-items: flex-start;
+          padding: 20px;
+          gap: 12px;
+        }
+
+        /* Footer centered and stacked on mobile */
+        .footer-inner {
+          flex-direction: column;
+          gap: 16px;
+          text-align: center;
+        }
+
+        /* Lightbox Close button position */
+        .lightbox-close-btn {
+          top: -30px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+
+    <!-- Hidden element to satisfy React applet setup gracefully in the workspace -->
+    <div id="root" style="display: none;"></div>
+
+    <!-- Navigation Bar Sticky -->
+    <header class="nav-sticky">
+      <div class="nav-inner">
+        <!-- Logo / Branding left side -->
+        <a href="#hero" class="nav-brand">
+          <div class="nav-logo-text">USŁUGI KOPARKĄ <span>· WYWROTKĄ</span></div>
+          <div class="nav-sublabel">Iława i okolice</div>
+        </a>
+
+        <!-- Desktop menu links middle -->
+        <nav class="desktop-menu">
+          <a href="#services">Usługi</a>
+          <span class="dot">·</span>
+          <a href="#about">O Nas</a>
+          <span class="dot">·</span>
+          <a href="#portfolio">Realizacje</a>
+          <span class="dot">·</span>
+          <a href="#contact">Kontakt</a>
+        </nav>
+
+        <!-- Staked phone links right side -->
+        <div class="nav-contact-block">
+          <a href="tel:606852160" class="nav-phone">606 852 160</a>
+          <a href="tel:735049275" class="nav-phone">735 049 275</a>
+        </div>
+
+        <!-- Mobile hamburger clicker icon -->
+        <button class="hamburger-btn" aria-label="Menu" id="mobileMenuToggleNav">
+          <span class="line-1"></span>
+          <span class="line-2"></span>
+          <span class="line-3"></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Mobile Navigation Overlay Drawer -->
+    <div class="mobile-overlay" id="mobileOverlayMenu">
+      <div class="mobile-links">
+        <a href="#services" class="mobile-link" id="mobLnk1">Usługi</a>
+        <a href="#about" class="mobile-link" id="mobLnk2">O Nas</a>
+        <a href="#portfolio" class="mobile-link" id="mobLnk3">Realizacje</a>
+        <a href="#contact" class="mobile-link" id="mobLnk4">Kontakt</a>
+      </div>
+      <div class="mobile-phones">
+        <a href="tel:606852160" class="mobile-phone-link">606 852 160</a>
+        <a href="tel:735049275" class="mobile-phone-link">735 049 275</a>
+      </div>
+    </div>
+
+    <!-- HERO HOME VIEW SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="hero-banner-vertical">KOPARKA · WYWROTKA · WYKOPY · TRANSPORT</div>
+      <div class="hero-content">
+        <div class="hero-location-label">Iława · Warmia-Mazury</div>
+        <hr class="hero-rule" />
+        <h1 class="hero-heading">
+          <span class="hero-heading-line">KOPARKA</span>
+          <span class="hero-heading-line">WYWROTKA</span>
+          <span class="hero-heading-line hero-heading-stamp">IŁAWA</span>
+        </h1>
+        <p class="hero-caption">Profesjonalne usługi koparkami i transport wywrotką. Solidnie, terminowo, z pełnym zaangażowaniem.</p>
+        <div class="hero-links">
+          <a href="tel:606852160" class="hero-link-primary">→ Zadzwoń: 606 852 160</a>
+          <a href="#services" class="hero-link-secondary">→ Zakres usług</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT COMPANY VIEW SECTION (01) -->
+    <section class="about-section light-bg" id="about">
+      <div class="section-container">
+        <div class="about-columns">
+          
+          <!-- Column left: descriptions and structured features list -->
+          <div class="about-main reveal">
+            <span class="section-label">01 ——— O NAS</span>
+            <h2>Solidnie. Terminowo. Z zaangażowaniem.</h2>
+            <div class="about-body">
+              <p>Oferujemy profesjonalne usługi koparkami oraz transport wywrotką na terenie Iławy i okolic. Dysponujemy koparko-ładowarką oraz koparką kołową — dobieramy sprzęt do konkretnego zakresu i specyfiki prac budowlanych.</p>
+              <p>Każde zlecenie traktujemy z należytą powagą. Przyjeżdżamy na czas, pracujemy z pełną dokładnością i pozostawiamy sprawdzony teren w umówionym stanie.</p>
+            </div>
+            
+            <div class="about-features">
+              <div class="about-feature-item">
+                <span class="about-feature-name">Własny sprzęt</span>
+                <span class="about-feature-value">koparko-ładowarka i koparka kołowa</span>
+              </div>
+              <div class="about-feature-item">
+                <span class="about-feature-name">Wywrotka</span>
+                <span class="about-feature-value">transport ziemi, kruszywa, materiałów</span>
+              </div>
+              <div class="about-feature-item">
+                <span class="about-feature-name">Iława i okolice</span>
+                <span class="about-feature-value">szybki dojazd, znajomość specyfiki terenu</span>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Column right: contact action sheet panel card -->
+          <div class="about-action-col reveal">
+            <div class="about-contact-card">
+              <div class="about-card-label">Zadzwoń po wycenę</div>
+              <div class="about-card-row">
+                <a href="tel:606852160" class="about-card-phone">606 852 160</a>
+              </div>
+              <div class="about-card-row">
+                <a href="tel:735049275" class="about-card-phone">735 049 275</a>
+              </div>
+              <div class="about-card-mail-wrap">
+                <a href="mailto:kola539@wp.pl" class="about-card-mail">kola539@wp.pl</a>
+              </div>
+              <div class="about-card-note">Wycena bezpłatna — odpowiemy na każde pytanie techniczne i organizacyjne.</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SERVICES OFFERS LIST VIEW SECTION (02) -->
+    <section class="services-section light-bg" id="services">
+      <div class="section-container">
+        <span class="section-label">02 ——— ZAKRES USŁUG</span>
+        <h2>Co wykonujemy</h2>
+        
+        <div class="services-list">
+          <div class="service-row reveal">
+            <span class="service-number">01</span>
+            <span class="service-title">Wykopy pod fundamenty</span>
+            <span class="service-desc">precyzyjne wybranie ziemi, wymiary w pełni zgodne z projektem budowlanym</span>
+          </div>
+          <div class="service-row reveal">
+            <span class="service-number">02</span>
+            <span class="service-title">Niwelacja terenu</span>
+            <span class="service-desc">profesjonalne wyrównanie i przygotowanie powierzchni pod planowaną inwestycję</span>
+          </div>
+          <div class="service-row reveal">
+            <span class="service-number">03</span>
+            <span class="service-title">Wyburzenia i rozbiórki</span>
+            <span class="service-desc">mechaniczne rozbijanie murów oraz sprawny załadunek gruzu i odpadów</span>
+          </div>
+          <div class="service-row reveal">
+            <span class="service-number">04</span>
+            <span class="service-title">Wykopy pod instalacje</span>
+            <span class="service-desc">sprawny ziemny montaż kanalizacji, wodociągów, gazu oraz kabli energetycznych</span>
+          </div>
+          <div class="service-row reveal">
+            <span class="service-number">05</span>
+            <span class="service-title">Załadunek i wywóz ziemi</span>
+            <span class="service-desc">szybki i zorganizowany wywóz nadwyżek urobku bezpośrednio z placu budowy</span>
+          </div>
+          <div class="service-row reveal">
+            <span class="service-number">06</span>
+            <span class="service-title">Transport wywrotką</span>
+            <span class="service-desc">zorganizowany dowóz kruszywa, piasku, czarnoziemu i materiałów sypkich</span>
+          </div>
+        </div>
+
+        <!-- Amber border highlighted callout bottom bar -->
+        <div class="services-cta-banner reveal">
+          <div class="services-cta-left">Chętnie wycenimy każdą pracę — bez żadnych zobowiązań.</div>
+          <a href="tel:606852160" class="services-cta-phone">→ 606 852 160</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- PHOTO GALLERY SECTION (03) -->
+    <section class="photos-section dark-bg" id="portfolio">
+      <div class="section-container">
+        <span class="section-label">03 ——— SPRZĘT I REALIZACJE</span>
+        <h2>Nasz sprzęt</h2>
+      </div>
+
+      <!-- Full screen click trigger image box -->
+      <div class="machinery-img-box reveal" id="galleryOverlayTrigger">
+        <img src="https://i.ibb.co/1YjXdkrV/695856445-122096089485318216-2287039888826616945-n.jpg" alt="Koparka kołowa wykonująca roboty ziemne w Iławie" class="machinery-img" />
+      </div>
+
+      <div class="section-container">
+        <div class="photo-bottom-strip reveal">
+          <div class="photo-strip-spec">Koparko-ładowarka · Koparka kołowa · Wywrotka transportowa</div>
+          <a href="https://www.facebook.com/profile.php?id=61589546490595" target="_blank" rel="noopener noreferrer" class="photo-strip-fb">
+            <i class="fa-brands fa-facebook-f"></i> Facebook — więcej zdjęć →
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT DETAILS VIEW SECTION (04) -->
+    <section class="contact-section light-bg" id="contact">
+      <div class="section-container">
+        <div class="contact-columns">
+          
+          <!-- Column Left: list representation -->
+          <div class="contact-data-col reveal">
+            <span class="section-label">04 ——— KONTAKT</span>
+            <h2>Wycena bezpłatna.</h2>
+            <p class="contact-intro-p">Działamy sprawnie na terenie Iławy i okolicznych gmin. Zadzwoń lub napisz — fachowo doradzimy i przygotujemy przejrzystą wycenę.</p>
+            
+            <div class="contact-list-items">
+              <div class="contact-detail-row">
+                <span class="contact-row-label">TELEFON</span>
+                <a href="tel:606852160" class="contact-phone-active">606 852 160</a>
+              </div>
+              <div class="contact-detail-row">
+                <span class="contact-row-label">TELEFON</span>
+                <a href="tel:735049275" class="contact-phone-active">735 049 275</a>
+              </div>
+              <div class="contact-detail-row">
+                <span class="contact-row-label">E-MAIL</span>
+                <a href="mailto:kola539@wp.pl" class="contact-mail-active">kola539@wp.pl</a>
+              </div>
+              <div class="contact-detail-row">
+                <span class="contact-row-label">OBSZAR DZIAŁANIA</span>
+                <span class="contact-text-static">Iława i okolice, województwo warmińsko-mazurskie</span>
+              </div>
+              <div class="contact-detail-row">
+                <span class="contact-row-label">FACEBOOK</span>
+                <a href="https://www.facebook.com/profile.php?id=61589546490595" target="_blank" rel="noopener noreferrer" class="contact-fb-active">
+                  Usługi Koparką Wywrotką <i class="fa-brands fa-facebook"></i> →
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Column right: massive graphic typographic layout -->
+          <div class="contact-decorative-block reveal">
+            
+            <a href="tel:606852160" class="massive-phone-link">
+              <span class="massive-phone-block-1">606</span>
+              <span class="massive-phone-block-2">852 160</span>
+            </a>
+            
+            <hr class="contact-decorative-divider" />
+            
+            <a href="tel:735049275" class="massive-phone-link">
+              <span class="massive-phone-block-1">735</span>
+              <span class="massive-phone-block-2">049 275</span>
+            </a>
+            
+            <span class="decorative-note">Odpiszemy lub oddzwonimy najszybciej jak to możliwe</span>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- PRIMARY FOOTER PANEL -->
+    <footer class="site-footer">
+      <div class="section-container">
+        <div class="footer-inner">
+          <div class="footer-brand-title">USŁUGI KOPARKĄ WYWROTKĄ</div>
+          <div class="footer-location-stamp">Iława i okolice · Warmia-Mazury</div>
+          <div class="footer-copyright">© 2026</div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- INTERACTIVE PHOTO LIGHTBOX MODAL DIALOG -->
+    <div class="lightbox-overlay" id="lightboxModalBox" role="dialog" aria-modal="true" aria-hidden="true">
+      <div class="lightbox-wrapper">
+        <button class="lightbox-close-btn" id="lightboxCloseButtonNav">ZAMKNIJ [X]</button>
+        <img src="https://i.ibb.co/1YjXdkrV/695856445-122096089485318216-2287039888826616945-n.jpg" alt="Powiększenie - Koparka kołowa w Iławie" class="lightbox-image" id="lightboxActiveSrcImg" />
+      </div>
+    </div>
+
+    <!-- Compile-safe Script bundle referencing standard developer module execution -->
+    <script type="module" src="/src/main.tsx"></script>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        // --- 1. Responsive hamburger navigation overlays ---
+        const menuToggle = document.getElementById("mobileMenuToggleNav");
+        const menuOverlay = document.getElementById("mobileOverlayMenu");
+        const overlayLinks = [
+          document.getElementById("mobLnk1"),
+          document.getElementById("mobLnk2"),
+          document.getElementById("mobLnk3"),
+          document.getElementById("mobLnk4")
+        ];
+
+        function toggleMenu() {
+          const isActive = menuToggle.classList.toggle("active");
+          menuOverlay.classList.toggle("active", isActive);
+          document.body.style.overflow = isActive ? "hidden" : "auto";
+        }
+
+        function closeMenu() {
+          menuToggle.classList.remove("active");
+          menuOverlay.classList.remove("active");
+          document.body.style.overflow = "auto";
+        }
+
+        menuToggle.addEventListener("click", toggleMenu);
+
+        overlayLinks.forEach(link => {
+          if (link) {
+            link.addEventListener("click", closeMenu);
+          }
+        });
+
+        // Close menu on resize if layout becomes desktop
+        window.addEventListener("resize", () => {
+          if (window.innerWidth > 900) {
+            closeMenu();
+          }
+        });
+
+
+        // --- 2. Live Lightbox Popup image zoom module ---
+        const lightboxTrigger = document.getElementById("galleryOverlayTrigger");
+        const lightboxOverlay = document.getElementById("lightboxModalBox");
+        const lightboxCloseBtn = document.getElementById("lightboxCloseButtonNav");
+
+        function openLightbox() {
+          lightboxOverlay.classList.add("active");
+          lightboxOverlay.setAttribute("aria-hidden", "false");
+          document.body.style.overflow = "hidden";
+        }
+
+        function closeLightbox() {
+          lightboxOverlay.classList.remove("active");
+          lightboxOverlay.setAttribute("aria-hidden", "true");
+          // Only restore scroll if mobile menu overlay is also inactive
+          if (!menuOverlay.classList.contains("active")) {
+            document.body.style.overflow = "auto";
+          }
+        }
+
+        if (lightboxTrigger) {
+          lightboxTrigger.addEventListener("click", openLightbox);
+        }
+
+        if (lightboxCloseBtn) {
+          lightboxCloseBtn.addEventListener("click", closeLightbox);
+        }
+
+        // Close lightbox when clicking outside the boundary wrapper on the dark backdrop
+        if (lightboxOverlay) {
+          lightboxOverlay.addEventListener("click", (event) => {
+            if (event.target === lightboxOverlay) {
+              closeLightbox();
+            }
+          });
+        }
+
+        // Keyboard navigation Esc close binder
+        document.addEventListener("keydown", (event) => {
+          if (event.key === "Escape") {
+            closeLightbox();
+            closeMenu();
+          }
+        });
+
+
+        // --- 3. Intersection Observer Scroll Fade-In Reveals ---
+        const elementsToReveal = document.querySelectorAll(".reveal");
+
+        const revealObserver = new IntersectionObserver((entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("reveal-active");
+              revealObserver.unobserve(entry.target); // Trigger only once for slick execution
+            }
+          });
+        }, {
+          threshold: 0.08,
+          rootMargin: "0px 0px -40px 0px"
+        });
+
+        elementsToReveal.forEach((el, index) => {
+          // If in services list, stagger row entries by index delay
+          if (el.classList.contains("service-row")) {
+            el.style.transitionDelay = `${index * 45}ms`;
+          }
+          revealObserver.observe(el);
+        });
+      });
+    </script>
+  </body>
+</html>

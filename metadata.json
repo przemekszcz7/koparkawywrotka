@@ -1,0 +1,6 @@
+{
+  "name": "Usługi Koparką Wywrotką",
+  "description": "Profesjonalne usługi koparko-ładowarką, koparką kołową i wywrotką w Iławie i okolicach. Wykopy, niwelacja terenu, wyburzenia oraz transport kruszywa.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
