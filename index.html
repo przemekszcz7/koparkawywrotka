@@ -981,6 +981,89 @@
         text-decoration: underline;
       }
 
+      /* MATERIALS GRID */
+      .materials-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 32px;
+        margin-top: 40px;
+      }
+
+      .material-card {
+        background-color: #1E1E1C;
+        border: 1px solid #2E2E2C;
+        display: flex;
+        flex-direction: column;
+        transition: border-color 0.3s ease, transform 0.3s ease;
+      }
+
+      .material-card:hover {
+        border-color: var(--accent);
+      }
+
+      .material-img-box {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 4 / 3;
+        overflow: hidden;
+        cursor: pointer;
+      }
+
+      .material-img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+        transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+      }
+
+      .material-card:hover .material-img {
+        transform: scale(1.03);
+      }
+
+      .material-info {
+        padding: 24px;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+      }
+
+      .material-title {
+        font-family: 'Barlow', sans-serif;
+        font-weight: 600;
+        font-size: 1.15rem;
+        color: var(--warm-white);
+        margin: 0 0 12px 0;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+      }
+
+      .material-desc {
+        font-family: 'Barlow', sans-serif;
+        font-weight: 400;
+        font-size: 0.875rem;
+        color: var(--mid);
+        line-height: 1.6;
+        margin: 0;
+      }
+
+      @media (max-width: 900px) {
+        .materials-grid {
+          grid-template-columns: repeat(2, 1fr);
+          gap: 24px;
+        }
+      }
+
+      @media (max-width: 600px) {
+        .materials-grid {
+          grid-template-columns: 1fr;
+          gap: 20px;
+        }
+        .material-info {
+          padding: 20px;
+        }
+      }
+
       /* CONTACT SECTION (04) */
       .contact-section {
         background-color: var(--warm-white);
@@ -1642,6 +1725,59 @@
           </div>
         </div>
       </div>
+
+      <!-- MATERIALS SECTION SUBSECTION -->
+      <div class="section-container" style="margin-top: 104px;">
+        <span class="section-label">OFEROWANE MATERIAŁY</span>
+        <h2>Materiały sypkie i kruszywa z dostawą</h2>
+        <p style="color: var(--mid); max-width: 680px; font-family: 'Barlow', sans-serif; font-size: 1.05rem; line-height: 1.6; margin: 16px 0 48px 0;" class="reveal">
+          Oferujemy kompleksową dostawę kruszyw i materiałów sypkich naszą wywrotką. Obsługujemy place budowy, inwestycje drogowe oraz ogrody na terenie miast <strong>Iława, Lubawa, Susz</strong> i okolicznych gmin. Kliknij na zdjęcie, aby powiększyć.
+        </p>
+
+        <div class="materials-grid">
+          <!-- Card 1 -->
+          <div class="material-card reveal" id="matCard1">
+            <div class="material-img-box">
+              <img src="https://i.ibb.co/F4SnRv68/725620881-2558569664566645-1739605323363063653-n.jpg" alt="Czarnoziem przesiewany ziemia ogrodowa Iława Lubawa Susz" class="material-img material-trigger-img" />
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="material-card reveal" id="matCard2">
+            <div class="material-img-box">
+              <img src="https://i.ibb.co/yFLpfTCn/726439640-941793042252215-5960533059392307462-n.jpg" alt="Tłuczeń drogowy i kliniec Iława" class="material-img material-trigger-img" />
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="material-card reveal" id="matCard3">
+            <div class="material-img-box">
+              <img src="https://i.ibb.co/YBTPMKfg/727045622-1340341928302529-6114412209683494437-n.jpg" alt="Piasek płukany siany budowlany Iława Lubawa Susz" class="material-img material-trigger-img" />
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="material-card reveal" id="matCard4">
+            <div class="material-img-box">
+              <img src="https://i.ibb.co/Gv6btLZk/726914213-1745070743298060-7762297816010615425-n.jpg" alt="Żwir płukany drenażowy Iława" class="material-img material-trigger-img" />
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="material-card reveal" id="matCard5">
+            <div class="material-img-box">
+              <img src="https://i.ibb.co/3yXn9Cpj/729412825-1890905888980456-1300169394599377336-n.jpg" alt="Pospółka żwirowo piaskowa do fundamentów Iława Lubawa Susz" class="material-img material-trigger-img" />
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="material-card reveal" id="matCard6">
+            <div class="material-img-box">
+              <img src="https://i.ibb.co/WpMr8btB/729348577-1548092692928148-3563437294733467462-n.jpg" alt="Piasek zasypowy do zagęszczeń Iława" class="material-img material-trigger-img" />
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <!-- FAQ SECTION (04) -->
@@ -1828,6 +1964,7 @@
         const lightboxTrigger = document.getElementById("galleryOverlayTrigger");
         const lightboxOverlay = document.getElementById("lightboxModalBox");
         const lightboxCloseBtn = document.getElementById("lightboxCloseButtonNav");
+        const lightboxActiveSrcImg = document.getElementById("lightboxActiveSrcImg");
 
         function openLightbox() {
           lightboxOverlay.classList.add("active");
@@ -1845,8 +1982,29 @@
         }
 
         if (lightboxTrigger) {
-          lightboxTrigger.addEventListener("click", openLightbox);
+          lightboxTrigger.addEventListener("click", () => {
+            if (lightboxActiveSrcImg) {
+              const mainImg = lightboxTrigger.querySelector("img");
+              if (mainImg) {
+                lightboxActiveSrcImg.src = "https://i.ibb.co/1YjXdkrV/695856445-122096089485318216-2287039888826616945-n.jpg";
+                lightboxActiveSrcImg.alt = mainImg.alt;
+              }
+            }
+            openLightbox();
+          });
         }
+
+        // Setup triggers for all newly added material cards
+        const materialTriggers = document.querySelectorAll(".material-trigger-img");
+        materialTriggers.forEach(img => {
+          img.addEventListener("click", () => {
+            if (lightboxActiveSrcImg) {
+              lightboxActiveSrcImg.src = img.src;
+              lightboxActiveSrcImg.alt = img.alt;
+            }
+            openLightbox();
+          });
+        });
 
         if (lightboxCloseBtn) {
           lightboxCloseBtn.addEventListener("click", closeLightbox);
