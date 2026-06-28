@@ -248,6 +248,52 @@
           },
           "areaServed": ["Iława", "Lubawa", "Susz", "województwo warmińsko-mazurskie"],
           "serviceType": "Transport"
+        },
+        {
+          "@type": "FAQPage",
+          "@id": "https://koparkawywrotkailawa.pl/#faq-schema",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "Jakie usługi ziemne oferujecie w Iławie, Lubawie i Suszu?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Oferujemy szeroki zakres robót ziemnych sprzętem najwyższej klasy, w tym precyzyjne wykopy pod fundamenty, profesjonalną niwelację terenu, korytowanie pod kostkę brukową i parkingi, wykopy pod instalacje (wodne, kanalizacyjne, gazowe, elektryczne), wyburzenia i rozbiórki mechaniczne budynków, a także załadunek oraz wywóz nadmiaru ziemi, gliny, humusu i gruzu naszymi wywrotkami na terenie Iławy, Lubawy, Susza i okolic."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Jakimi maszynami dysponujecie i jak dobrać sprzęt do pracy?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Nasza flota obejmuje m.in. wydajną koparko-ładowarkę oraz zwrotną koparkę kołową, a także ładowną wywrotkę przeznaczoną do transportu kruszywa i ziemi. Do mniejszych, wielozadaniowych prac lub na utwardzonym terenie świetnie sprawdza się koparko-ładowarka. Przy głębszych wykopach, dużych niwelacjach i trudniejszym gruncie w Iławie, Lubawie czy Suszu dedykujemy koparkę kołową. Przed rozpoczęciem prac bezpłatnie doradzamy i dobieramy optymalną maszynę."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Ile kosztuje usługa koparki oraz transport wywrotką w regionie?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Każde zlecenie w regionie Iławy, Lubawy i Susza wyceniamy indywidualnie, ponieważ ostateczny koszt zależy od specyfiki gruntu, zakresu robót, czasu pracy maszyn oraz odległości transportowej przy wywozie ziemi czy dowozie materiałów sypkich. Zapewniamy w pełni bezpłatną, niezobowiązującą wycenę na miejscu inwestycji lub telefonicznie – u nas nie ma ukrytych kosztów."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Jak przygotować teren przed przyjazdem koparki na budowę?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Kluczowe jest wyznaczenie przez geodetę osi budynku lub granic planowanego wykopu oraz upewnienie się, że na trasie dojazdu ciężkiego sprzętu nie znajdują się przeszkody lub podziemne instalacje, o których operator powinien wiedzieć przed rozpoczęciem pracy. Oferujemy fachowe doradztwo techniczne i wspólnie z inwestorem ustalamy Plan Działania przed wjazdem maszyny w Iławie, Lubawie czy Suszu."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Czy dostarczacie również piasek, żwir i czarnoziem wywrotką?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Tak, świadczymy kompleksowe usługi transportowe wywrotką. Dostarczamy najwyższej jakości piasek (do murowania, miksokreta), żwir o różnych frakcjach, czarnoziem (humus idealny pod trawniki i ogrody), a także tłuczeń, kliniec czy pospółkę. Obsługujemy sprawnie place budowy, ogrody i inwestycje drogowe na obszarze miast Iława, Lubawa, Susz oraz okolicznych gmin."
+              }
+            }
+          ]
         }
       ]
     }
@@ -1220,6 +1266,103 @@
         margin-top: 16px;
       }
 
+      /* GOOGLE REVIEW BANNER SECTION */
+      .review-cta-section {
+        background-color: var(--dark);
+        border-top: 1px solid #1E1E1C;
+        padding: 96px 0;
+        text-align: center;
+        position: relative;
+        overflow: hidden;
+      }
+
+      .review-cta-card {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 0 24px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+      }
+
+      .review-stars {
+        color: var(--accent);
+        font-size: 1.75rem;
+        letter-spacing: 4px;
+        margin-bottom: 8px;
+        display: flex;
+        justify-content: center;
+        gap: 4px;
+      }
+
+      .review-cta-title {
+        font-family: 'Barlow', sans-serif;
+        font-weight: 600;
+        font-size: 2.25rem;
+        color: var(--page);
+        letter-spacing: -0.02em;
+        line-height: 1.2;
+        margin: 0;
+        text-transform: uppercase;
+      }
+
+      .review-cta-text {
+        font-family: 'Barlow', sans-serif;
+        font-weight: 400;
+        font-size: 1.1rem;
+        color: var(--mid);
+        line-height: 1.6;
+        max-width: 580px;
+        margin: 0 0 12px 0;
+      }
+
+      .review-google-btn {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+        background-color: var(--accent);
+        color: var(--dark);
+        text-decoration: none;
+        padding: 16px 36px;
+        font-family: 'Barlow', sans-serif;
+        font-weight: 700;
+        font-size: 1.05rem;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.25s ease, box-shadow 0.25s ease;
+        border: 1px solid var(--accent);
+      }
+
+      .review-google-btn:hover {
+        background-color: transparent;
+        color: var(--accent);
+        transform: translateY(-2px);
+        box-shadow: 0 8px 24px rgba(230, 170, 40, 0.15);
+      }
+
+      .review-google-btn i {
+        font-size: 1.2rem;
+      }
+
+      @media (max-width: 768px) {
+        .review-cta-section {
+          padding: 64px 0;
+        }
+        .review-cta-title {
+          font-size: 1.75rem;
+        }
+        .review-cta-text {
+          font-size: 1rem;
+        }
+        .review-google-btn {
+          padding: 14px 28px;
+          font-size: 0.95rem;
+          width: 100%;
+          justify-content: center;
+        }
+      }
+
       /* FOOTER */
       .site-footer {
         background-color: #0E0E0C;
@@ -1869,6 +2012,12 @@
                   Ogłoszenie na portalu OLX <i class="fa-solid fa-arrow-up-right-from-square"></i> →
                 </a>
               </div>
+              <div class="contact-detail-row">
+                <span class="contact-row-label">OPINIE GOOGLE</span>
+                <a href="https://share.google/OeTofJJQIE5hFwVPd" target="_blank" rel="noopener noreferrer" class="contact-fb-active" style="color: var(--accent);">
+                  Wystaw nam opinię w Google <i class="fa-brands fa-google"></i> ★★★★★ →
+                </a>
+              </div>
             </div>
           </div>
 
@@ -1890,6 +2039,28 @@
             <span class="decorative-note">Odpiszemy lub oddzwonimy najszybciej jak to możliwe</span>
           </div>
 
+        </div>
+      </div>
+    </section>
+
+    <!-- GOOGLE REVIEW CTA SECTION -->
+    <section class="review-cta-section reveal">
+      <div class="section-container">
+        <div class="review-cta-card">
+          <div class="review-stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <h2 class="review-cta-title">Podziel się opinią w Google</h2>
+          <p class="review-cta-text">
+            Zadowolony z naszych usług ziemnych lub transportu wywrotką? Twoja opinia jest dla nas niezwykle ważna i pomaga nam budować naszą renomę w regionie Iławy, Lubawy i Susza. Dodaj krótką ocenę w naszym profilu Google!
+          </p>
+          <a href="https://share.google/OeTofJJQIE5hFwVPd" target="_blank" rel="noopener noreferrer" class="review-google-btn">
+            <i class="fa-brands fa-google"></i> Daj nam opinię w Google
+          </a>
         </div>
       </div>
     </section>
